@@ -1,10 +1,6 @@
 class BooksController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
 
-  def new
-    @book = Book.new
-  end
-
   def index
     @user = current_user
     @books = Book.all
@@ -25,8 +21,9 @@ class BooksController < ApplicationController
   end
 
   def show
-    @user=current_user
     @book = Book.find(params[:id])
+    @newbook = Book.new
+    @user = @book.user
   end
 
   def destroy

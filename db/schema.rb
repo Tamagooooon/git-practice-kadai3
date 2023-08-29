@@ -56,9 +56,6 @@ ActiveRecord::Schema.define(version: 2023_08_22_072043) do
     t.datetime "remember_created_at"
     t.string "name"
     t.string "introduction"
-    t.string "title"
-    t.string "body"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

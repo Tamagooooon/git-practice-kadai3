@@ -1,33 +1,39 @@
 <div class="col-md-3">
 
-  <% if @book.errors.any? %>
-    <%= @book.errors.count %>errors prohibited this obj from being saved:
+  <% if book.errors.any? %>
+    <%= book.errors.count %>errors prohibited this obj from being saved:
       <ul>
-        <% @book.errors.full_messages.each do |message| %>
+        <% book.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
   <% end %>
 
   <h2>User info</h2>
-    <%= image_tag @user.get_profile_image %>
+    <%= image_tag user.get_profile_image %>
       <table class="table table-hover table-inverse">
         <tbody>
           <tr>
 	          <th>name</th>
-	          <th><%= @user.name %></th>
+	          <th><%= user.name %></th>
           </tr>
           <tr>
 	          <th>introduction</th>
-	          <th><%= @user.introduction %></th>
+	          <th><%= user.introduction %></th>
           </tr>
         </tbody>
       </table>
 
     <div class="row">
-      <%= link_to edit_user_path(current_user.id), class: "btn btn-outline-secondary btn-block" do %>
-        <i class="fas fa-user-cog "></i>
-      <%end%>
+      <% if user == current_user %>
+        <%= link_to edit_user_path(user.id), class: "btn btn-outline-secondary btn-block" do %>
+        <i class="fa-solid fa-user-cog"></i>
+      <% end %>
+      <% else %>
+        <%= link_to edit_user_path(user.id), class: "btn btn-outline-secondary btn-block" do %>
+        <i class="fa-solid fa-user-cog"></i>
+      <% end %>
+      <% end %>
     </div>
 
     <h2>New book</h2>

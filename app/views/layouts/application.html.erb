@@ -25,7 +25,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
             <%= link_to user_path(current_user.id), class: 'nav-link text-white' do %>
-              <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+              <i class="fa-solid fa-home" style="color: #ffffff;"></i>
               Home
             <% end %>
             </li>
@@ -43,7 +43,7 @@
             </li>
             <li class="nav-item">
               <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-white' do %>
-                <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-sign-out-alt" style="color: #ffffff;"></i>
                 Log out
               <% end %>
             </li>
@@ -52,7 +52,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <%= link_to root_path, class: 'nav-link text-white' do %>
-                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-home" style="color: #ffffff;"></i>
                 Home
               <% end %>
             </li>
@@ -65,12 +65,12 @@
             <li class="nav-item">
               <%= link_to new_user_registration_path, class: 'nav-link text-white' do %>
                 <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>
-                Sign Up
+                Sign up
               <% end %>
             </li>
             <li class="nav-item">
               <%= link_to new_user_session_path, class: 'nav-link text-white' do %>
-                <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-sign-in-alt" style="color: #ffffff;"></i>
                 Log in
               <% end %>
             </li>
